@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Naver Webtoon 모아보기</h1>
+        <table>
+        {%for i in t: %}
+            <thead>
+                <tr>
+                    <th>썸네일</th>
+                    <th>웹툰 제목</th>
+                    <th>웹툰 링크</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src= "{{ i["img_url"] }}" ></td>
+                    <td>{{ i['title'] }}</td>
+                    <td><a href= "{{ i["url"] }}" >웹툰 가즈아</a></td>
+                </tr>
+            </tbody>
+        {% endfor %}
+        </table>
+    </body>
+</html>
